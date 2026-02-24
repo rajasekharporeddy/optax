@@ -247,6 +247,9 @@ def _base_newton_schulz_iteration(x: jax.Array, coeffs: jax.Array) -> jax.Array:
   return coeffs[0] * x + b @ x
 
 
+_newton_schulz_iterator = _base_newton_schulz_iteration  # backwards compat
+
+
 def _aol_ns_iterator(i, x, coeffs):
   # Modified first step using AOL rescaling
   return jax.lax.cond(
