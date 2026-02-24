@@ -420,5 +420,6 @@ class MuonTest(parameterized.TestCase):
     self.assertLess(ortho_error, 1e-3,
                     f'Orthogonality error too high: {ortho_error}')
 
+
 if __name__ == '__main__':
   absltest.main()
